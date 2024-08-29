@@ -1,10 +1,24 @@
 import './index.css'
 import Header from './components/header'
+import Home from './pages/home'
+import { useRoutes } from 'react-router-dom'
+import About from './pages/about'
 function App() {
+  const routes = useRoutes([
+    {
+      path: '/',
+      element: <Home title="Hello I'm" contd="a Frontend Developer"/>
+    },
+    {
+      path: '/about',
+      element: <About/>
+    }
+  ])
   return (
     <>
       <div>
-         <Header dev="Nf"/>
+         <Header dev="Nweke Favour" test="Let's Talk"/>
+          {routes}
       </div>
     </>
   )
