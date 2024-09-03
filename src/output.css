@@ -1244,7 +1244,7 @@ input:checked+.toggle-bg{
 }
 
 .dark .apexcharts-gridline,.dark .apexcharts-xcrosshairs,.dark .apexcharts-ycrosshairs{
-  stroke:#374151!important
+  stroke:#374151!important;
 }
 
 .sr-only{

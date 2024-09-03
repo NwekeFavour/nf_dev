@@ -11,28 +11,215 @@ body{
   font-style: normal;
 }
 
-.home div:nth-child(3) {
-  /* background-color: #007BFF; */
+.man{
+  transform: rotate(-15deg) translate(-6px, 15px) !important
 }
+
+
+.nf{
+  transform:  rotate(10deg) translate(7px, -15px);
+}
+
+.body{
+  background-color: #333333;
+  width: 100% !important;
+}
+
+/* .home div:nth-child(3) {
+  background-color: #007BFF;
+} */
 
 .home div:nth-child(2) {
   /* background-color: #8C8C8C; */
 }
 
-.home div:nth-child(4) {
-  background-color: #F2F2F2;
+.container{
+  position: relative !important;
 }
-.home div:nth-child(5) {
+
+.bg2 {
+  background-color: #D2B48C !important;
+  width: 100% !important;
+  height: 800px !important;
+}
+
+.bar, .barOne, .barTwo{
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+
+.barOne{
+    transform: rotate(50deg) translate(-5px, 6px) !important;
+}
+/* 
+.bar-one{
+  transform: rotate(-1deg) translate(-5px, 6px) !important;
+}
+
+.bar-two {
+  transform: rotate(-1deg) translate(-5px, 6px) !important;
+} */
+
+.barTwo{
+    transform: rotate(-46deg) translate(-3px, -6px) !important;
+}
+/* .home div:nth-child(5) {
   background-color: #008080;
-}
-.home div:nth-child(6) {
+} */
+/* .home div:nth-child(6) {
   background-color: #D2B48C;
-}
+} */
 
 
 .bar {
-  display: block !important;
   width: 100% !important;
-  background-color: white !important;
+  background-color: #dbd6d6 !important;
   transition: transform 0.3s, opacity 0.3s;
+}
+
+
+/* .animation,
+.animation_layer {
+  height: 500px;
+} */
+
+.animation {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  overflow-y: scroll !important;
+  height: 100% !important;
+  
+}
+
+
+
+.animation_layer{
+  height:55% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .bugs{
+    display: block !important;
+  }
+  .home{
+    position: relative;
+    top: 100px;
+  }
+  .code svg{
+      width: 50px;
+  }
+   .terminal svg{
+      width: 50px;
+  }
+    .specializing {
+      width: 400px !important;
+    }
+
+    .animation_layer{
+      height:40% !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .iconic {
+      display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+  .specializing{
+    width: 355px !important;
+  }
+    .animation_layer {
+      height: 35% !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bg2{
+      height: 900px !important;
+    }
+
+   
+
+    .group{
+      top: 180px !important;
+      left: 46px !important;
+    }
+    .section1{
+      display: block !important;
+    }
+    
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .layer-two{
+      inset: 190px, 0, 0 !important;
+    }
+    .vector{
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 690px) {
+  .vector{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 372px) {
+#container {
+    bottom: 300px !important;
+  }
+
+  .bulb{
+    display: block !important;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .section1{
+    display: flex;
+  }
+  .group{
+    left: 146px;
+  }
+  #container{
+    height: 500px !important;
+  }
+}
+
+@media screen and ( min-width:768px) {
+  .about, .process, .service{
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (min-width:900px) {
+
+  .about,
+  .process,
+  .service {
+    font-size: 24px !important;
+  }
+}
+
+@media screen and (max-width:330px) {
+  .mainProcess{
+    position: relative;
+    top: 240px;
+  }
+  #container{
+    position: relative;
+    top: 100px !important;
+  }
 }
