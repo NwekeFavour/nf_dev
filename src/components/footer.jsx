@@ -45,7 +45,7 @@ function footer() {
                             </a>
                         </div>
                     </div>
-                    <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+                    <hr className="my-6 border-[#D2B48C] sm:mx-auto lg:my-8" />
                     <span className="block text-sm text-[#D2B48C] sm:text-center ">© 2023 <a href="" className="hover:underline">Nweke Favour</a>. All Rights Reserved.</span>
                 </div>
             </footer>
