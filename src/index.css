@@ -29,6 +29,8 @@ body{
   background-color: #007BFF;
 } */
 
+
+
 .home div:nth-child(2) {
   /* background-color: #8C8C8C; */
 }
@@ -38,14 +40,11 @@ body{
 }
 
 .bg2 {
-  background-color: #D2B48C !important;
+  background-color: #8C8C8C !important;
   width: 100% !important;
   height: 800px !important;
 }
 
-.bar, .barOne, .barTwo{
-    transition: transform 0.3s, opacity 0.3s !important;
-}
 
 .barOne{
     transform: rotate(50deg) translate(-5px, 6px) !important;
@@ -72,10 +71,14 @@ body{
 
 .bar {
   width: 100% !important;
-  background-color: #dbd6d6 !important;
+  background-color: #111827 !important;
   transition: transform 0.3s, opacity 0.3s;
 }
 
+.section3{
+  background-color: #007BFF;
+  height: 30% !important;
+}
 
 /* .animation,
 .animation_layer {
@@ -95,11 +98,12 @@ body{
 
 
 .animation_layer{
-  height:55% !important;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .bugs{
@@ -128,6 +132,11 @@ body{
     .iconic {
       display: none !important;
     }
+    .section3{
+      height: 47% !important;
+    }
+
+   
 }
 
 
@@ -143,7 +152,7 @@ body{
     }
 
     .bg2{
-      height: 900px !important;
+      height: 950px !important;
     }
 
    
@@ -156,7 +165,11 @@ body{
       display: block !important;
     }
     
+    .section3{
+      height: 45% !important;
+    }
 }
+
 
 
 
@@ -166,7 +179,8 @@ body{
     }
     .vector{
     display: block !important;
-  }
+    }
+    
 }
 
 @media screen and (min-width: 690px) {
@@ -176,9 +190,9 @@ body{
 }
 
 
-@media screen and (max-width: 372px) {
+@media screen and (max-width: 370px) {
 #container {
-    bottom: 300px !important;
+    top:300px !important;
   }
 
   .bulb{
@@ -196,11 +210,19 @@ body{
   #container{
     height: 500px !important;
   }
+  .message{
+    transform: rotate(-5deg) !important;
+    margin-bottom: 20px;
+  }
+  
 }
 
 @media screen and ( min-width:768px) {
   .about, .process, .service{
     font-size: 20px !important;
+  }
+  .message{
+    transform: rotate(-2deg) !important
   }
 }
 
@@ -222,4 +244,18 @@ body{
     position: relative;
     top: 100px !important;
   }
+}
+
+@media screen and (max-width:321px) {
+  .mainProcess{
+    display: none !important;
+  }
+  #container {
+    top:3px !important;
+  }
+
+  .section3{
+    height: 49% !important;
+  }
+
 }

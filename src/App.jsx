@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <div>
-         <Header dev="Nweke Favour" test="Let's Talk"/>
+         <Header dev="Nw" test="Let's Talk"/>
           {routes}
       </div>
     </>

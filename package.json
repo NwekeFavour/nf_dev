@@ -18,7 +18,8 @@
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
     "react-router-dom": "^6.26.1",
-    "react-spring": "^9.7.4"
+    "react-spring": "^9.7.4",
+    "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
