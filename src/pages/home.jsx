@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Skills from '../components/skills';
 import Dev from '../assets/image/REACTJS_DEVELOPER.svg'
@@ -16,6 +16,11 @@ import Footer from '../components/footer';
 
 function Home() {
     const containerRef = useRef(null);
+
+    const [mode, setMode] = useState(false)
+    
+
+    const changeMode = () => {}
 
 
        useEffect(() => {
@@ -34,9 +39,9 @@ function Home() {
     }, []);
 
     return (
-        <div>
-            <Parallax className='animation' pages={5}>
-                <div className=' animation_layer lg:mb-5 md:h-[850px] h-[600px]'>
+        <div className=''>
+            <Parallax className='animation' pages={5.4}>
+                <div className=' animation_layer  lg:mb-5 md:h-[850px] h-[600px]'>
                     <div className='  top-4 body absolute'>
                         <div className='home'>                           
                             <div className='block section1 md:flex gap-7 items-center justify-between md:m-[50px]  md:p-0'>
@@ -73,39 +78,16 @@ function Home() {
                                         </div>
                                     </div>      
                                 </div>  
-                                <div className='relative md:mx-0 mx-auto md:w-[424px] w-[72%]'>
+                                <div className='relative md:mx-0 mx-auto md:w-[424px] w-[60%]'>
                                     <img className='md:w-[424px] w-[350px]' src={Vector_one} alt="" />
                                     <div className='absolute group lg:top-[200px] md:top-[160px] lg:left-[120px] top-[120px] left-[50px] md:left-[90px]'>
                                         <img className='lg:w-[300px] md:[300px] w-[200px]' src={ Group } alt="" />
                                     </div>
                                 </div>
                             </div> 
-                        </div>
-                        <div className='md:flex md:m-0 m-6 md:relative relative md:top-0 top-[100px] items-center justify-center gap-8'>
-                            {/* <div className=' md:block hidden md:mx-4 md:absolute left-0'>
-                                <div>
-                                    <Code/>
-                                </div>
-                                <div>
-                                    <Code/>
-                                </div>
-                                <div>
-                                    <Code/>
-                                </div>
-                            </div> */}
-                            {/* <div className=' md:ms-5 md:w-[40%]'>
-                                <p className='m-0 text-gray-300  md:text-[20px]'>
-                                    My focus is on delivering clean, efficient code that meets industry standards, ensuring every project is both functional and visually engaging.
-                                </p>
-                            </div>
-                            <div className='md:my-0 my-3 md:w-[40%]'>
-                                <p className='m-0 text-gray-300  md:text-[20px]'>
-                                    I craft visually appealing, user-friendly web interfaces, turning designs into responsive, interactive websites using modern web technologies
-                                </p>
-                            </div> */}
-                        </div>
+                        </div>                        
                         <div className='relative lg:top-[-10px] top-[110px] lg:my-14'>
-                            <div className='z-[-1] md:my-5 my-20 absolute block'>
+                            <div className='z-[-1] md:my-5 my-20 md:mt-[25px] mt-[10rem] absolute block'>
                                 <Skills/>
                             </div>
                              <div className='bulb md:hidden'>
@@ -122,7 +104,7 @@ function Home() {
                                  text-gray-700'>about.</h5>
                             </div>
                             <div className='md:w-[60%]'>
-                                <p className='md:text-[24px] md:mx-0 mx-5 md:my-0 my-4 about text-gray-600 text-[20px]'>I am a frontend developer with over 3 years of experience specializing in React.js and Node.js. I’m skilled in JavaScript, HTML, CSS, and some aspect of backend development. I also have experience in teaching Python,C,C++ e.t.c and deploying applications, and using version control with GitHub.
+                                <p className='md:text-[24px] md:mx-0 mx-5 md:my-0 my-4 about text-gray-600 text-[20px]'>I am a frontend developer with 2+ years of experience, specializing in React.js and Node.js. Skilled in JavaScript, HTML, CSS, and backend integration, with expertise in deploying applications and using GitHub for version control.
                                 </p>
                             </div>
                         </div>
@@ -148,20 +130,7 @@ function Home() {
                                 <p className='md:text-[24px] md:mx-0 mx-5 md:my-0 my-4 text-gray-600 text-[18px] process'>I follow a process that includes gathering requirements, defining scope, planning with a roadmap, designing prototypes, developing frontend and backend, conducting thorough testing, deploying the application, and providing post-launch support and improvements.
                                 </p>
                             </div>
-                        </div>
-                        {/* <div className='flex relative md:top-[150px] top-[170px] items-center justify-end'>
-                            <div>
-                                <div className='md-mx-0 mx-3 flex items-center justify-end'>
-                                    <h5 className='lg:text-[40px] text-[30px] font-medium
-                                    text-gray-700'>adaptability.</h5>
-                                </div>
-                                <div className='md:w-[60%] absolute right-[5px]'>
-                                    <p className='md:text-[24px] text-end md:mx-0 mx-5 md:my-0 my-4 text-gray-600 service text-[20px]'>
-                                       I show the ability to learn and adapt to new technologies, such as working with different JavaScript frameworks (React.js, Vue.js) and backend tools. I demonstrate quick learning in unfamiliar environments, efficiently handle evolving project requirements, and thrive in dynamic, fast-paced development settings.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>  */}
+                        </div>                        
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer id='container' ref={containerRef} offset={2} speed={0.64}>
@@ -186,7 +155,7 @@ function Home() {
                         <ProjectsComp/>
                     </div>                    
                 </ParallaxLayer>   
-                <ParallaxLayer className='z-[-1]' offset={4} speed={0.5}>
+                <ParallaxLayer className='z-[-1] contact' offset={4} speed={0.5}>
                     <div className='contactUs'>
                         <Contact/>
                     </div> 

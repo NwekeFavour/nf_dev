@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body{
   background-color: #333333;
   font-family: "Ubuntu", sans-serif;
@@ -77,7 +76,7 @@ body{
 
 .section3{
   background-color: #007BFF;
-  height: 30% !important;
+  height: 35% !important;
 }
 
 /* .animation,
@@ -103,6 +102,16 @@ body{
     justify-content: center;
 }
 
+@media screen and (max-width:769px) {
+  .ssp{
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px !important;
+  }
+  .proj{
+    display: none !important;
+  }
+}
 
 
 @media screen and (max-width: 768px) {
@@ -111,7 +120,7 @@ body{
   }
   .home{
     position: relative;
-    top: 100px;
+    top: 150px;
   }
   .code svg{
       width: 50px;
@@ -133,14 +142,20 @@ body{
       display: none !important;
     }
     .section3{
-      height: 47% !important;
+      height: 37% !important;
+    }
+
+    .ssp{
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
     }
 
    
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 601px) {
   .specializing{
     width: 355px !important;
   }
@@ -166,7 +181,14 @@ body{
     }
     
     .section3{
-      height: 45% !important;
+      height: 58% !important;
+    }
+    .ssp{
+      display: block !important;
+    }
+    .contact{
+      position: relative;
+      top: 300px !important;
     }
 }
 
@@ -258,4 +280,32 @@ body{
     height: 49% !important;
   }
 
+}
+
+@media screen and (max-width: 431px) {
+  .section3{
+    height: 56.5% !important;
+  }
+  .contact{
+    top: 450px !important;
+  }
+}
+
+
+@media screen and (max-width: 376px) {
+  .section3{
+    height: 60% !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .contact{
+    height: 900px !important;
+  }
+}
+
+@media screen and (min-width : 320px) {
+  .gratitude{
+    display: flex !important;
+  }
 }

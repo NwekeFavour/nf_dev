@@ -19,13 +19,13 @@ const Header = (props) => {
 
     return (
         <div>
-            <Navbar className=' bg-transparent lg:mx-3 my-3' fluid  rounded>
-                <NavbarBrand href="https://flowbite-react.com">
+            <Navbar className=' bg-transparent lg:mx-3 mx-5 my-3' fluid  rounded>
+                <NavbarBrand href="">
                     <span className="self-center lg:ms-0 ms-2 whitespace-nowrap text-xl font-semibold text-[#111827] lg:text-[40px]">{ props.dev }</span>
                 </NavbarBrand>
                 <div className="flex md:order-3">
                     <div className='lg:flex md:hidden hidden items-center mx-3'>
-                        <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200  hover:text-cyan-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 uppercase leading-snug">Resume</button>
+                        <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-semibold text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200  hover:text-cyan-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 uppercase leading-snug cursor-pointer">Resume</button>
                     </div>
                     {/* <NavbarToggle /> */}
                     <span className="md:hidden flex items-center mx-2 capitalize text-[#111827] font-semibold"> menu</span>

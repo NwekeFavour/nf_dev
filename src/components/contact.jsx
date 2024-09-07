@@ -9,7 +9,7 @@ const contact = () => {
                 <div>
                     <div className='flex items-center justify-start'>
                         <span>
-                            <p className='lg:text-[40px] text-[30px]'>Have idea about project?</p>
+                            <p className='lg:text-[40px] text-[#111827] text-[30px]'>Have idea about project?</p>
                         </span>
                         <img src={ Frame } alt="fame-two" />
                     </div>

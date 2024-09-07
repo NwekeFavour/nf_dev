@@ -1,3 +1,4 @@
+import { TypeAnimation } from "react-type-animation";
 
 function footer() {
     return (
@@ -5,7 +6,7 @@ function footer() {
             <footer className="rounded-lg ">
                 <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                     <div className="sm:flex sm:items-center sm:justify-between">
-                        <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                        <a href="" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                             <span className="self-center text-2xl font-semibold whitespace-nowrap text-[#D2B48C]">Nweke favour</span>
                         </a>
                         <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">
@@ -46,9 +47,32 @@ function footer() {
                         </div>
                     </div>
                     <hr className="my-6 border-[#D2B48C] sm:mx-auto lg:my-8" />
-                    <span className="block text-sm text-[#D2B48C] sm:text-center ">© 2023 <a href="" className="hover:underline">Nweke Favour</a>. All Rights Reserved.</span>
+                    <span className="block text-sm text-[#D2B48C] sm:text-center ">© 2023 <a href="" className="hover:underline">Nf(v1)</a>. created by Nweke Favour</span>
                 </div>
             </footer>
+            <div className="hidden gratitude md:flex items-center justify-center my-8">
+                <div>
+                    <h1 className="font-semibold text-lg text-[30px] md:text-[60px] text-[#D2B48C]">
+                        <TypeAnimation
+                             sequence={[
+                                'Thanks for viewing',
+                                1000,
+                                'Thanks',
+                                1000,
+                                'Would Love to work with you',
+                                1000,
+                                'Would'
+                            ]}
+                            cursor={true}
+                            speed={30}
+                            repeat={Infinity}
+                            deletionSpeed={80}
+                        >
+
+                        </TypeAnimation>
+                    </h1>
+                </div>
+            </div>
         </div>
     );
 }
