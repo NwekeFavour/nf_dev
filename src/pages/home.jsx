@@ -13,8 +13,15 @@ import Component from '../assets/image/Component11.svg'
 import ProjectsComp from '../components/projects';
 import Contact from '../components/contact';
 import Footer from '../components/footer';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 function Home() {
+    useEffect(() => {
+        Aos.init({
+            duration: 1000
+        })
+    }, [])
     const containerRef = useRef(null);
 
     const [mode, setMode] = useState(false)
@@ -78,7 +85,7 @@ function Home() {
                                         </div>
                                     </div>      
                                 </div>  
-                                <div className='relative md:mx-0 mx-auto md:w-[424px] w-[60%]'>
+                                <div data-aos="fade-down" className='relative md:mx-0 mx-auto md:w-[424px] w-[60%]'>
                                     <img className='md:w-[424px] w-[350px]' src={Vector_one} alt="" />
                                     <div className='absolute group lg:top-[200px] md:top-[160px] lg:left-[120px] top-[120px] left-[50px] md:left-[90px]'>
                                         <img className='lg:w-[300px] md:[300px] w-[200px]' src={ Group } alt="" />
@@ -96,14 +103,14 @@ function Home() {
                         </div>                        
                     </div>
                 </div>
-                <ParallaxLayer className='bg2' offset={1} speed={0.4}>
+                <ParallaxLayer  className='bg2' offset={1} speed={0.4}>
                     <div className=' md:px-3 md:py-3 py-6'> 
-                        <div>
+                        <div >
                             <div className='md-mx-0 mx-3'>
                                 <h5 className='lg:text-[40px] text-[30px] font-medium
                                  text-gray-700'>about.</h5>
                             </div>
-                            <div className='md:w-[60%]'>
+                            <div  className='md:w-[60%]'>
                                 <p className='md:text-[24px] md:mx-0 mx-5 md:my-0 my-4 about text-gray-600 text-[20px]'>I am a frontend developer with 2+ years of experience, specializing in React.js and Node.js. Skilled in JavaScript, HTML, CSS, and backend integration, with expertise in deploying applications and using GitHub for version control.
                                 </p>
                             </div>
@@ -140,7 +147,7 @@ function Home() {
                                 Let’s work together and make everything<br/> super unique and super useful.
                             </p>
                         </div>
-                        <div className='md:m-4 m-2 flex items-center justify-center'>
+                        <div  className='md:m-4 m-2 flex items-center justify-center'>
                             <img className='md:w-[600px]' src={ Size } alt="" />
                         </div>
                     </div>
