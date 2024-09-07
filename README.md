@@ -9,4 +9,4 @@ Currently, two official plugins are available:
 
 # nf_dev version one
 
-# would use react-framer-motion and react-springs for animation
+<!-- # would use react-framer-motion and react-springs for animation -->
