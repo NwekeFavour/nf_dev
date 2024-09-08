@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand } from 'flowbite-react';
 import '../index.css'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 const Header = (props) => {
 
     const [navigation, hideNavigation] = useState(false)
@@ -13,15 +14,48 @@ const Header = (props) => {
         if (navigation === true) {
            hideNavigation(false)
         }
-
-
     }
+
+    const container = {
+        hidden: { opacity: 1 },
+        visible: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.1, // Stagger effect for children
+          },
+        },
+      };
+
+    const wave = {
+        hidden: { y: 0 },
+        visible: {
+          y: [0, -20, 0], // Creates a wave motion
+          transition: {
+            repeat: Infinity,
+            repeatDelay: 0.5,
+            staggerChildren: 0.1,
+          },
+        },
+    };
 
     return (
         <div>
             <Navbar className=' bg-transparent lg:mx-3 mx-5 my-3' fluid  rounded>
                 <NavbarBrand href="">
-                    <span className="self-center lg:ms-0 ms-2 whitespace-nowrap text-xl font-semibold text-[#111827] lg:text-[40px]">{ props.dev }</span>
+                    <span className="self-center lg:ms-0 ms-2 whitespace-nowrap font-semibold text-[#111827] lg:text-[40px] text-[30px] brand">
+                    <motion.h1
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
+                    style={{ display: 'flex' }}
+                    >
+                        {`${props.dev}`.split('').map((char, index) => (
+                            <motion.span key={index} variants={wave} style={{ display: 'inline-block' }}>
+                            {char}
+                            </motion.span>
+                        ))}
+                    </motion.h1>    
+                    </span>
                 </NavbarBrand>
                 <div className="flex md:order-3">
                     <div className='lg:flex md:hidden hidden items-center mx-3'>
@@ -31,9 +65,9 @@ const Header = (props) => {
                     <span className="md:hidden flex items-center mx-2 capitalize text-[#111827] font-semibold"> menu</span>
                     <button onClick={toggleNavigation} data-testid="flowbite-navbar-toggle" className="block  items-center rounded-lg p-2 text-sm text-black focus:outline-none  dark:text-gray-400 md:h-[40px] h-[47px] dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:block md:w-[50px] lg:hidden  w-[45px] pointer-events-auto">
                         <span className="sr-only">Open main menu</span>
-                        <span className={`w-[60%] block  mx-auto ${navigation ? 'barOne' : ''} bg-[#111827] h-[2px]`}></span>
-                        <span className={`bar ${navigation ? 'hidden' : 'block'} my-2 w-full h-[2px]`}></span>
-                        <span className={`w-[60%] ${navigation ? 'barTwo': ''} block ms-1 bg-[#111827] h-[2px]`}></span>
+                        <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path clipRule="evenodd" fillRule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                        </svg>
                     </button>
                 </div>
                 <div className={`lg:flex md:w-auto w-full ${navigation ? 'block' : 'hidden'}`} data-testid="flowbite-navbar-collapse">

@@ -1,5 +1,4 @@
 import './index.css'
-import Header from './components/header'
 import Home from './pages/home'
 import { useRoutes } from 'react-router-dom'
 import About from './pages/about'
@@ -20,7 +19,6 @@ function App() {
   return (
     <>
       <div>
-         <Header dev="Nw" test="Let's Talk"/>
           {routes}
       </div>
     </>

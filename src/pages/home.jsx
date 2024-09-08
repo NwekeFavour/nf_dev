@@ -15,6 +15,7 @@ import Contact from '../components/contact';
 import Footer from '../components/footer';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import Header from '../components/header';
 
 function Home() {
     useEffect(() => {
@@ -30,23 +31,34 @@ function Home() {
     const changeMode = () => {}
 
 
-       useEffect(() => {
-        if (containerRef.current) {
-            var options = {
-                animate: true,
-                patternWidth: 377.81,
-                patternHeight: 100,
-                grainOpacity: 0.14,
-                grainDensity: 1,
-                grainWidth: 1,
-                grainHeight: 1
+     useEffect(() => {
+        const applyGrain = () => {
+            if (containerRef.current) {
+                const options = {
+                    animate: true,
+                    patternWidth: 377.81,
+                    patternHeight: 100,
+                    grainOpacity: 0.14,
+                    grainDensity: 1,
+                    grainWidth: 1,
+                    grainHeight: 1,
+                };
+                grained(containerRef.current, options);
             }
-            grained(containerRef.current, options);
-        }
+        };
+
+        // Delay the effect slightly to ensure the DOM is fully ready
+        const timeoutId = setTimeout(() => {
+            applyGrain();
+        }, 100); // Adjust delay if necessary
+
+        // Cleanup on unmount
+        return () => clearTimeout(timeoutId);
     }, []);
 
     return (
         <div className=''>
+            <Header dev="Nw" test="Let's Talk"/>
             <Parallax className='animation' pages={5.4}>
                 <div className=' animation_layer  lg:mb-5 md:h-[850px] h-[600px]'>
                     <div className='  top-4 body absolute'>
@@ -140,8 +152,8 @@ function Home() {
                         </div>                        
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer id='container' ref={containerRef} offset={2} speed={0.64}>
-                    <div   className='h-[700px] z-1  bg-gray-200'>
+                <ParallaxLayer  offset={2} speed={0.64}>
+                    <div ref={containerRef}  id='container'  className='h-[700px] w-[100%] z-1  bg-gray-200'>
                         <div className='text-center md:m-10 m-5'>
                             <p className='md:text-[30px] text-[25px] font-semibold text-gray-800'>
                                 Let’s work together and make everything<br/> super unique and super useful.
