@@ -2,6 +2,7 @@ import './index.css'
 import Home from './pages/home'
 import { useRoutes } from 'react-router-dom'
 import About from './pages/about'
+import Shelf from './pages/shelf'
 function App() {
 
   
@@ -14,6 +15,10 @@ function App() {
     {
       path: '/about',
       element: <About/>
+    },
+    {
+      path: 'lib/shelf',
+      element: <Shelf/>
     }
   ])
   return (
