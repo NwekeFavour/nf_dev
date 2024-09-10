@@ -5,7 +5,7 @@ import About from './pages/about'
 import Shelf from './pages/shelf'
 import Contact from './pages/contactPage'
 import { useEffect, useState } from 'react'
-import { SyncLoader } from 'react-spinners'
+import { RiseLoader } from 'react-spinners'
 function App() {
   const [loading,setLoading] = useState(false)
   const routes = useRoutes([
@@ -39,8 +39,8 @@ function App() {
         {
           loading ? 
             <div className='bg-[#D2B48C] loader'>
-              <div className='flex items-center  justify-center relative top-[300px] '>
-                <SyncLoader
+              <div className='flex items-center  justify-center relative top-[270px] '>
+                <RiseLoader
                   size={10}
                   loading={loading}
                   aria-label='loading spinner'
