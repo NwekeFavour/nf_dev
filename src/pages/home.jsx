@@ -12,6 +12,9 @@ import { TypeAnimation } from 'react-type-animation';
 import Component from '../assets/image/Component11.svg'
 import ProjectsComp from '../components/projects';
 import Contact from '../components/contact';
+import MessageUs from '../components/messageUs';
+import Frame from '../assets/image/frame.svg'
+import FrameTwo from '../assets/image/frame2.svg'
 import Footer from '../components/footer';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
@@ -90,9 +93,6 @@ function Home() {
                                     {/* <span>{ props.contd }</span> */}
                                     <div className='lg:mt-6 mt-4 flex  items-center lg:justify-start'>
                                         <div>
-                                            <button type="button" className="py-2.5 w-[120px] md:w-[120px] lg:w-[140px] px-5 me-2 mb-2 text-lg font-medium text-gray-900 md:text-[20px] focus:outline-none border-gray-200 hover:bg-[#3C3C3C] hover:text-gray-300    dark:text-gray-400 bg-[#8C8C8C] dark:border-gray-600 dark:hover:text-white ">Hire Me</button>
-                                        </div>
-                                        <div>
                                             <button type="button" className="py-2.5 w-[170px]  lg:w-[200px] px-5 me-2 mb-2 text-lg font-medium text-gray-200 rounded-r-lg md:text-[20px] focus:outline-none border-gray-200 hover:bg-[#3C3C3C] hover:text-gray-300    dark:text-gray-400 bg-[#111827] dark:border-gray-600 dark:hover:text-white ">Download CV</button>
                                         </div>
                                     </div>      
@@ -164,7 +164,25 @@ function Home() {
                         </div>
                     </div>
                     {/* contact */}
-                    <Contact/>
+                    <div className='md:flex block justify-around lg:mx-0 lg:mt-0 mt-[19.5rem]  lg:my-0 md:my-20 my-6 md:mx-6 mx-5 items-center lg:py-14'>
+                        <div>
+                            <div className='flex items-center justify-start'>
+                                <span>
+                                    <p className='lg:text-[40px] text-[#111827] text-[30px]'>Have idea about project?</p>
+                                </span>
+                                <img src={ Frame } alt="fame-two" />
+                            </div>
+                            <div className='lg:w-[450px]'>
+                                <h5 className='lg:text-[20px] text-gray-100'>
+                                    {" Let's collaborate to bring your vision to life, leveraging modern technologies and creative solutions."}
+                                </h5>
+                            </div>
+                            <MessageUs/>
+                        </div>
+                        <div>
+                            <img className='lg:w-[300px] w-[250px] mx-auto' src={ FrameTwo } width={300} alt="frame-two" />
+                        </div>
+                    </div>
                 </ParallaxLayer>
                 <ParallaxLayer className='section3' offset={3} speed={1.4}>
                     <div className='lg:my-5 my-3'>
