@@ -4,8 +4,10 @@ import { useRoutes } from 'react-router-dom'
 import About from './pages/about'
 import Shelf from './pages/shelf'
 import Contact from './pages/contactPage'
+import { useEffect, useState } from 'react'
+import { SyncLoader } from 'react-spinners'
 function App() {
-  
+  const [loading,setLoading] = useState(false)
   const routes = useRoutes([
     {
       path: '/',
@@ -24,10 +26,35 @@ function App() {
       element:<Contact/>
     }
   ])
+
+  useEffect(() => {
+      setLoading(true)
+      setTimeout(() => {
+        setLoading(false)
+      }, 5000)
+  },[])
   return (
     <>
-      <div>
-          {routes}
+      <div> 
+        {
+          loading ? 
+            <div className='bg-[#D2B48C] loader'>
+              <div className='flex items-center  justify-center relative top-[300px] '>
+                <SyncLoader
+                  size={10}
+                  loading={loading}
+                  aria-label='loading spinner'
+                  color='#008080'
+                  data-testid='loader'
+                />
+              </div>
+            </div>
+
+          :
+            <div>
+              {routes}
+            </div>
+        }
       </div>
     </>
   )

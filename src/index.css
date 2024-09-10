@@ -74,6 +74,21 @@ body{
   background-color: #D2B48C;
 } */
 
+.loader{
+  height: 100vh !important;
+  animation: loader 9s ease-out;
+}
+
+@keyframes loader {
+  from{
+    height: 100vh;
+    opacity: 70%;
+  }
+  to{
+    height: 0px;
+    opacity: 0;
+  }
+}
 
 .bar {
   width: 100% !important;
