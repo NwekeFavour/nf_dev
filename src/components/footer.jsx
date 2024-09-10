@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 
 function footer() {
     return (
-        <div>
+        <div className="">
             <div className="hidden gratitude md:flex items-center justify-center my-8">
                 <div>
                     <h1 className="font-semibold text-lg text-[30px] md:text-[35px] text-[#D2B48C]">

@@ -86,7 +86,7 @@ const About = () => {
                         </div>
                     </div>
                     <div data-aos="fade-down" className='relative  md:w-1/3 flex items-center justify-center'>
-                        <img src={ Profile } className='sm:w-[400px] w-[350px]' alt="" />
+                        <img src={ Profile } className='sm:w-[400px] w-[320px]' alt="" />
                     </div>
                 </div>
             </div>

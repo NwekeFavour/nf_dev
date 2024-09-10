@@ -4,6 +4,7 @@ import '../index.css'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import 'aos/dist/aos.css'
 import { useTrail, a } from 'react-spring';
 
 const Trail = ({ navigation, children }) => {
@@ -67,7 +68,7 @@ const Header = (props) => {
     return (
         <div>
             <Navbar className=' bg-transparent lg:mx-3 mx-5 my-3' fluid  rounded>
-                <NavbarBrand href="">
+                <NavbarBrand href="" data-aos="zoom-in-down">
                     <span className="self-center lg:ms-0 ms-2 whitespace-nowrap font-semibold text-[#111827] lg:text-[40px] text-[30px] brand">
                         <motion.h1
                         variants={container}
@@ -110,7 +111,7 @@ const Header = (props) => {
                                     <Link className="block py-2 pl-3 pr-4 md:p-0 hover:bg-gray-50  dark:text-gray-400 lg:text-[20px] font-semibold dark:hover:bg-gray-700 dark:hover:text-white  md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-[#111827]" to={"/lib/shelf"}>Shelf</Link>
                                 </li>
                                 <li>
-                                    <Link className="block py-2 pl-3 pr-4 md:p-0 hover:bg-gray-50  dark:text-gray-400 lg:text-[20px] font-semibold dark:hover:bg-gray-700 dark:hover:text-white md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-[#111827]" to={"#"}>Contact</Link>
+                                    <Link className="block py-2 pl-3 pr-4 md:p-0 hover:bg-gray-50  dark:text-gray-400 lg:text-[20px] font-semibold dark:hover:bg-gray-700 dark:hover:text-white md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-[#111827]" to={"/contact"}>Contact</Link>
                                 </li>
                             </div>
                             <Trail navigation={navigation} className="relative trail">
@@ -134,7 +135,7 @@ const Header = (props) => {
                                     <Link className="block py-2 pl-3 pr-4 md:p-0 hover:bg-gray-50  dark:text-gray-400 lg:text-[20px] font-semibold dark:hover:bg-gray-700 dark:hover:text-white  md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-[#111827]" to={"/lib/shelf"}>Shelf</Link>
                                 </li>
                                 <li>
-                                    <Link className="block py-2 pl-3 pr-4 md:p-0 hover:bg-gray-50  dark:text-gray-400 lg:text-[20px] font-semibold dark:hover:bg-gray-700 dark:hover:text-white md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-[#111827]" to={"#"}>Contact</Link>
+                                    <Link className="block py-2 pl-3 pr-4 md:p-0 hover:bg-gray-50  dark:text-gray-400 lg:text-[20px] font-semibold dark:hover:bg-gray-700 dark:hover:text-white md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-[#111827]" to={"/contact"}>Contact</Link>
                                 </li>
                                 <div className='flex items-center gap-4 justify-end mx-2'>
                                     <div>

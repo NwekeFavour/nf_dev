@@ -3,9 +3,8 @@ import Home from './pages/home'
 import { useRoutes } from 'react-router-dom'
 import About from './pages/about'
 import Shelf from './pages/shelf'
+import Contact from './pages/contactPage'
 function App() {
-
-  
   
   const routes = useRoutes([
     {
@@ -19,6 +18,10 @@ function App() {
     {
       path: 'lib/shelf',
       element: <Shelf/>
+    },
+    {
+      path: '/contact',
+      element:<Contact/>
     }
   ])
   return (
