@@ -5,7 +5,7 @@ import FrameTwo from '../assets/image/frame2.svg'
 const contact = () => {
     return (
         <div className=''>
-            <div className='md:flex block justify-around lg:mx-0  lg:my-0 md:my-20 my-6 md:mx-6 mx-5 items-center lg:py-14'>
+            <div className='md:flex block justify-around lg:mx-0 lg:mt-0 mt-[19.5rem]  lg:my-0 md:my-20 my-6 md:mx-6 mx-5 items-center lg:py-14'>
                 <div>
                     <div className='flex items-center justify-start'>
                         <span>
