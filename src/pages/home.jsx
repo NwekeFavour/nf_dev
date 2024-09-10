@@ -93,7 +93,11 @@ function Home() {
                                     {/* <span>{ props.contd }</span> */}
                                     <div className='lg:mt-6 mt-4 flex  items-center lg:justify-start'>
                                         <div>
-                                            <button type="button" className="py-2.5 w-[170px]  lg:w-[200px] px-5 me-2 mb-2 text-lg font-medium text-gray-200 rounded-r-lg md:text-[20px] focus:outline-none border-gray-200 hover:bg-[#3C3C3C] hover:text-gray-300    dark:text-gray-400 bg-[#111827] dark:border-gray-600 dark:hover:text-white ">Download CV</button>
+                                            <button  type="button" className="py-2.5 w-[170px]  lg:w-[200px] px-5 me-2 mb-2 text-lg font-medium text-gray-200 rounded-r-lg md:text-[20px] focus:outline-none border-gray-200 hover:bg-[#3C3C3C] hover:text-gray-300    dark:text-gray-400 bg-[#111827] dark:border-gray-600 dark:hover:text-white ">
+                                                <a href="./Nweke_Favour.pdf" download="Nweke_Favour.pdf">
+                                                    Download CV
+                                                </a>
+                                            </button>
                                         </div>
                                     </div>      
                                 </div>  

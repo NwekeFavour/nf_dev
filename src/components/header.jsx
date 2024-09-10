@@ -86,7 +86,11 @@ const Header = (props) => {
                 </NavbarBrand>
                 <div className="flex md:order-3">
                     <div className='lg:flex md:hidden hidden items-center mx-3'>
-                        <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-semibold text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200  hover:text-cyan-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 uppercase leading-snug cursor-pointer">Resume</button>
+                        <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-semibold text-gray-900 focus:outline-none bg-gray-300 rounded-lg border border-gray-200  hover:text-cyan-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 uppercase leading-snug cursor-pointer">
+                            <a href="./Nweke_Favour.pdf" download="Nweke_Favour.pdf">
+                                Resume
+                            </a>        
+                        </button>
                     </div>
                     {/* <NavbarToggle /> */}
                     <span className="md:hidden flex items-center mx-2 capitalize text-[#111827] font-semibold"> menu</span>
