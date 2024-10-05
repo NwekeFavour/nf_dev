@@ -14,6 +14,10 @@ function App() {
       element: <Home dev="Nweke Favour" title="Hello  I'm Favour" contd="a Frontend Developer"/>
     },
     {
+      path: '/home',
+      element: <Home dev="Nweke Favour" title="Hello  I'm Favour" contd="a Frontend Developer"/>
+    },
+    {
       path: '/about',
       element: <About/>
     },
