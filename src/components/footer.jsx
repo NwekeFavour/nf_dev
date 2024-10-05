@@ -38,7 +38,7 @@ function footer() {
                                 <Link to={'/about'} className="hover:underline me-4 md:me-6 text-[#D2B48C]">About {"/"}</Link>
                             </li>
                             <li>
-                                <Link to={"/shelf"} className="hover:underline me-4 md:me-6 text-[#D2B48C]">shelf {"/"}</Link>
+                                <Link to={"/lib/shelf"} className="hover:underline me-4 md:me-6 text-[#D2B48C]">shelf {"/"}</Link>
                             </li>
                             <li>
                                 <Link to={"/home"} className="hover:underline me-4 md:me-6 text-[#D2B48C]">Home {"/"}</Link>

@@ -22,7 +22,7 @@ function App() {
       element: <About/>
     },
     {
-      path: 'lib/shelf',
+      path: '/lib/shelf',
       element: <Shelf/>
     },
     {
