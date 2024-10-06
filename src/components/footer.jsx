@@ -44,7 +44,7 @@ function footer() {
                                 <Link to={"/home"} className="hover:underline me-4 md:me-6 text-[#D2B48C]">Home {"/"}</Link>
                             </li>
                             <li>
-                                <Link to={"/contact-us"} className="hover:underline text-[#D2B48C]">Contact {"/"}</Link>
+                                <Link to={"/contact"} className="hover:underline text-[#D2B48C]">Contact {"/"}</Link>
                             </li>
                         </ul>
                     </div>
