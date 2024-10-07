@@ -3,7 +3,7 @@ import FrameThree from '../assets/image/frame15.svg'
 const messageUs = () => {
 
     const handleMail = () => {
-        window.location.href= 'mailto:nwekefavour1315@gmail.com?subject=Subject&body=Message';
+        window.location.href= 'mailto:nwekefavour1320@gmail.com?subject=Subject&body=Message';
     }
 
     return (
